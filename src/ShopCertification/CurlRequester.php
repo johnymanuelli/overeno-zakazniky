@@ -30,6 +30,8 @@ class CurlRequester implements IRequester
         try {
             $curlOptions = [
                 CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFHOST => false,
             ];
 
             if ($postData) {
